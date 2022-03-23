@@ -1,3 +1,4 @@
+/* nav styling */
 nav li {
     background-color: #d6d6d6;
     padding: 10px;
@@ -19,6 +20,7 @@ a {
 }
 a:visited{color: black;}
 
+/* body text and galleries */
 body{
     background-color: #e9e5e5;
     font-family: "Fira Sans", sans-serif;
@@ -46,6 +48,12 @@ img {
     border: 2px solid black;
     border-radius: 10px;
     margin: 10px 5px 10px 5px;
+}
+.top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
 }
 .gallery {
     background-color: #f5f5dc;
@@ -83,6 +91,8 @@ footer p {
     color: #3e3465;
     padding: 50px 0;
 }
+
+/* form styling */
 legend {
     font-size: 2em;
     font-weight: bold;
@@ -110,11 +120,12 @@ input[type=submit] {
   width: 100%;
   font-size: 2em;
 }
-/* @media screen and (max-width: 770px) { */
 form {
     width: 80%;
     margin: 0 auto;
 }
+
+/* grid for climate page */
 .grid-gallery {
     margin-bottom: 20px;
     display: grid;
@@ -123,18 +134,50 @@ form {
     row-gap: 5px;
     justify-items: center;
 }
-/* .gallery-two {
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 5px;
-    row-gap: 5px;
-    justify-items: center; */
-
 .grid-gallery img {
     margin: 0px;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
+/* flex for produce gallery page */
+.flex-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* animations */
+@keyframes fade {
+    0% {opacity:0;}
+    25% {opacity:.5;}
+    50% {opacity:.75;}
+    100% {opacity:1;}
+}
+@keyframes grow {
+    from {font-size: 1em;}
+    to {font-size: 4em;}
+    0% {opacity:0;}
+    25% {opacity:.5;}
+    50% {opacity:.75;}
+    100% {opacity:1;}
+}
+#animate {
+    animation: fade 6s 1;
+}
+#grow {
+    animation: grow 6s 1;
+}
+
+/* media queries */
+@media screen and (max-width: 770px) {
+    .grid-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    #animate, #grow {
+        animation: none;
+    }
 }
