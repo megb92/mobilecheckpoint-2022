@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vegetable Farming in Alaska</title>
+    <link rel="icon" href="images/ak_map.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bde8bdeb96.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWYPNZERKN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'G-TWYPNZERKN');
+    </script>
+</head>
+
+<body>
+    <a href="#main">Skip to Main Content</a>
+<header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="farmers.html">Background</a></li>
+        <li><a href="climate.html">Local Climate</a></li>
+        <li><a href="produce.html">Gallery</a></li>
+        <li class="active"><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+<div class="header">
+    <h1>Contact Us</h1>
+</div>
+</header>
+
+<main id="main">
+<form
+  action="https://formspree.io/f/xlezlala"
+  method="POST"
+>
+    <fieldset>
+        <legend>Send Us a Note</legend>
+        <label for="name">Name</label>
+        <input type="text" name="user_name" id="name" placeholder="Enter Your Name">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter Your Email">
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number">
+        <div><span>Format: xxx-xxx-xxxx</span></div>
+        <div><span>Okay to text?</span></div>
+        <label for="yes">Yes</label>
+        <input type="radio" name="radio" id="yes" value="Yes">
+        <br>
+        <label for="no">No</label>
+        <input type="radio" name="radio" id="no" value="No">
+        <br>
+        <label for="message">Leave A Message</label><br>
+        <textarea name="message" id="message" style="width:300px; height:300px"></textarea>
+        <!-- <br><label for="veggie">Favorite Veggie</label>
+        <datalist type="datalist" name="datalist" id="veggie">  -->
+        <input type="submit" name="submit">
+    </fieldset>
+</form>
+<footer>
+    <p><i class="fa-solid fa-carrot"></i>Meghan Berry &copy; 2022</p>
+</footer>
+</body>
+</html>
+</main>
