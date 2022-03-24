@@ -29,7 +29,7 @@ body{
     margin-right: 25px;
 }
 h1 {
-    font-size: 4em;
+    font-size: 35px;
     text-align: center;
     padding: 5px 10px;
     border: 2px solid black;
@@ -40,7 +40,7 @@ h2 {
     font-weight: bold;
 }
 p {
-    font-size: 1.5em;
+    font-size: 25px;
 }
 img {
     height: 300px;
@@ -60,8 +60,10 @@ img {
     margin-top: 20px;
 }
 .gallery img{
+    display: block;
     height: 250px;
     width: auto;
+    margin: 3px auto 3px auto;
 }
 .gallery img:nth-child(2n):hover {
     padding: 5px;
@@ -120,13 +122,13 @@ input[type=submit] {
     background-color: #3e3465;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 0px;
   border: none;
   width: 100%;
   font-size: 2em;
 }
 form {
-    width: 80%;
+    width: auto;
     margin: 0 auto;
 }
 
@@ -134,7 +136,7 @@ form {
 .grid-gallery {
     margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 5px;
     row-gap: 5px;
     justify-items: center;
@@ -150,12 +152,13 @@ form {
 .flex-gallery {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
+    flex-wrap: nowrap;
     justify-content: space-around;
 }
 .flex-gallery img {
-    margin: 2px;
+    min-width: 0;
+    height: 25vh;
+    margin: 1px;
 }
 
 /* animations */
@@ -166,8 +169,8 @@ form {
     100% {opacity:1;}
 }
 @keyframes grow {
-    from {font-size: 1em;}
-    to {font-size: 4em;}
+    from {font-size: 5px;}
+    to {font-size: 35px;}
     0% {opacity:0;}
     25% {opacity:.5;}
     50% {opacity:.75;}
@@ -181,15 +184,6 @@ form {
 }
 
 /* media queries */
-@media screen and (max-width: 770px) {
-    p {
-        font-size: 25px;
-        text-align: center;
-    }
-    .grid-gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 @media screen and (prefers-reduced-motion: reduce) {
     #animate, #grow {
         animation: none;
