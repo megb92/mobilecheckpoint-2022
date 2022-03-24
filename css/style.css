@@ -13,6 +13,10 @@ a {
     color: black;
     text-decoration: none;
 }
+a.skip {
+    position: absolute;
+    left: -500px;
+}
 .active {
     background: #5f8d60;
     font-weight: bold;
